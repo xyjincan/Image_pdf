@@ -25,7 +25,7 @@ func init() {
 
 func IsImageFile(file string) bool {
 
-	fullFilename := file
+	fullFilename := strings.ToLower(file)
 	var filenameWithSuffix string
 	filenameWithSuffix = path.Base(fullFilename) //获取文件名带后缀
 	var fileSuffix string
