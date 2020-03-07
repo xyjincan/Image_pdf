@@ -67,10 +67,11 @@ func IsNaturalNum(data_path string) (natural bool,imgfiles[] string){
 			continue
 		}
 		count++
-		if base_prefix == base_suffix && base_prefix == "" {
+		if count == 1 {
 			base_prefix = file.Name()
 			base_suffix = file.Name()
 		}
+		fmt.Println(file.Name())
 		for base_prefix != "" {
 			if strings.HasPrefix(str, base_prefix) {
 				break
